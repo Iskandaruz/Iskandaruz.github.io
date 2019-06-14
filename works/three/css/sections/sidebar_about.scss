@@ -1,0 +1,185 @@
+.content{
+    .container{
+        @extend %clearfix;
+    }
+}
+
+.sidebar{
+    width: rem(220px);
+    float: left;
+}
+
+.nav__list{
+    text-align: right;
+}
+
+.nav__item{
+    @extend %no_listyle;
+}
+
+.nav__link{
+    @extend %no_textdec;
+    display: block;
+    padding: rem(10px) rem(20px) rem(10px) 0;
+    border-right: rem(5px) solid transparent;
+    color: $black;
+    
+    
+    &:hover{
+    border-right: rem(5px) solid $blue;
+    color: $blue;    
+
+    }
+    
+    .fa{
+        margin-right: rem(5px);
+    }
+    
+    
+}
+
+.page-content{
+    width: rem(700px);
+    float: right;
+    
+    @include laptop {
+        width: rem(536px);
+    }
+    
+    @include tablet {
+        width: rem(286px);
+    }
+    
+    @include mobile {
+        width: rem(274px);
+
+    }
+}
+
+//------------ABOUT----------------
+
+
+.about{
+    @extend %clearfix;
+}
+
+.about__left{
+    width: rem(300px);
+    float: left;
+    
+    @include laptop {
+        width: rem(146px);
+
+    }
+    
+    @include tablet {
+        width: rem(43px);
+
+    }
+    
+    @include mobile {
+        width: rem(122px);
+
+
+    }
+}
+
+.about__right{
+    width: rem(380px);
+    float: right;
+    
+     @include laptop {
+        width: rem(266px);
+
+
+    }
+    
+    @include tablet {
+        width: rem(162px);
+
+
+    }
+    
+    @include mobile {
+        width: rem(148px);
+
+
+
+    }
+}
+
+.about__pic{
+    overflow: hidden;
+    border-radius: 50%;
+    border: rem(5px) solid #fff;
+    display: inline-block;
+    width: rem(220px);
+    height: rem(220px);
+    box-sizing: border-box;
+    
+    @include tablet {
+        width: rem(108px);
+        height: rem(108px);
+
+
+    }
+    
+    @include mobile {
+        width: rem(80px);
+        height: rem(80px);
+    }
+}
+
+.about__pic-img{
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.title{
+    font-size: rem(35px);
+    color: $black;
+    margin-bottom: rem(25px);
+}
+
+
+.about__desc{
+    p{
+        font-size: rem(18px);
+        margin-top: 0;
+        color: #646464;
+        margin-bottom: rem(20px);
+        overflow: auto;
+    }
+}
+
+.about__btns{
+    text-align: right;
+    
+    .btn{
+        display: inline-block;
+        padding: rem(15px);
+        border: rem(2px )solid #e85f61;
+        display: inline-block;
+        color: #e85f61;
+        border-radius: rem(50px);
+        text-decoration: none;
+        font-size: rem(14px);
+        font-weight: bold;
+        transition: all .5s;
+        text-align: center;
+        
+        &:hover{
+            background: #e85f61;
+            color:#fff;
+            cursor: pointer;
+            border-color: rgba(#e85f61, .2);
+        }
+        
+        .fa-download{
+            margin-right: rem(2px);
+        }
+    }
+}
+
+

@@ -1,0 +1,61 @@
+.footer{
+    background: #414141;
+    @extend %clearfix;
+    
+    .container{
+        position: relative;
+    }
+
+}
+
+
+
+
+
+
+.copyright {
+	font-size: 14px;
+	line-height: 16px;
+	color: #9c9c9c;
+	position: absolute;
+	left: 0;
+	top: 18px;
+}
+
+@each $social in (fc, tw, vk){
+    .socials__link_#{$social} {
+        background: url(../img/icons/#{$social}.png) 0 0 no-repeat;
+        
+        
+    }
+}
+
+.socials {
+	position: absolute;
+	right: 0;
+	top: 10px;
+}
+.socials__item{
+    @extend %no_listyle;
+    display: inline-block;
+}
+
+
+
+
+
+.socials__link{
+    width: 32px;
+    height: 32px;
+    display: block;
+    opacity: .9;
+    position: relative;
+
+    &:hover{
+        opacity: 1;
+        top: -2px;
+    }
+    
+}
+
+

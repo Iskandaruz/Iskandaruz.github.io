@@ -1,0 +1,89 @@
+.portfolio{
+    @extend %clearfix;
+}
+
+.apps__list{
+    margin-left: -20px;
+}
+
+
+.apps__item{
+    @extend %no_listyle;
+    @include inline_block(top);
+    overflow: hidden;
+    float: left;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    box-sizing: border-box;
+    
+    
+    
+}
+
+
+.apps__link{
+    display: block;
+}
+
+
+
+.apps__block{
+    overflow: hidden;
+    display: inline-block;
+    width: 220px;
+    border-radius: 10px;
+    @include box-shadow(0px 1px 3px 0px rgba(0, 0, 0, 0.2));
+    opacity: 0.9;
+    box-sizing: border-box;
+    
+    &:hover{
+        @include box-shadow(0px 1px 3px 0px rgba(#dc042b, 0.7));
+        opacity: 1;
+
+    }
+}
+
+
+
+
+.apps__img{
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+
+.apps__desc{
+    background: #fff;
+    width: 100%;
+}
+
+.apps__title{
+    @include fira(regular);
+    font-size: 21px;
+    color: $blue;
+    padding: 20px 0 10px 20px;
+    box-sizing: border-box;
+}
+
+.apps__subtitle{
+    @include fira(regular);
+    font-size: 14px;
+    color: #534742;
+    padding: 0 0 15px 20px;
+    box-sizing: border-box;
+    
+}
+
+.apps__type{
+    font-size: 13px;
+    color: $black;
+    padding: 0 0 18px 20px;
+    
+}
+
+
+
+
+
+

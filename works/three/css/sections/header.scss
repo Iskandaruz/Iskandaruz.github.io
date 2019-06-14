@@ -1,0 +1,55 @@
+.header{
+    background: #fff;
+    @include box-shadow(0 1px 3px 0 rgba(#000, .2));
+    @extend %clearfix;
+    margin-bottom: 1.25rem;
+    width: 100%;
+    
+}
+
+
+
+.header__left, .header__right{
+    float: left;
+    width: 50%;
+}
+
+.header__right{
+    text-align: right;
+}
+
+.user__avatar {
+    @include inline_block(top);
+    width: rem(60px);
+    height: rem(60px);
+    border-radius: 50%;
+    border: 1px solid #bebebe;
+    box-sizing: border-box;
+    background: #ccc;
+    margin: rem(10px) rem(20px) rem(10px) 0;
+}
+
+.user__name{
+    @include inline_block(top);
+    @include fira(bold);
+    color: #414141;
+    font-size: rem(18px);
+    margin-top: rem(34px);
+}
+
+.contacts__link{
+    @extend %no_textdec;
+    color: $blue;
+    @include fira(bold);
+    font-size: rem(18px);
+    border-bottom: 2px dotted $blue;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-top: rem(34px); 
+}
+
+
+.contacts__dropdown-item{
+    @extend %no_listyle;
+}
+

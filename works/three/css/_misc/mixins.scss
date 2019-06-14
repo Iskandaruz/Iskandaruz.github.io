@@ -1,0 +1,73 @@
+@mixin box-shadow($params){
+    
+    box-shadow: $params;
+    -webkit-box-shadow: $params;
+    -moz-box-shadow: $params;
+    -ms-box-shadow: $params;
+
+
+}
+
+@mixin text-shadow($params){
+     text-shadow: $params;
+    -webkit-text-shadow: $params;
+    -moz-text-shadow: $params;
+    -ms-text-shadow: $params;
+}
+
+%no_listyle{
+    list-style: none;
+}
+
+%no_textdec{
+    text-decoration: none;
+}
+
+%clearfix{
+    &:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+
+
+@mixin inline_block($valign:top){
+    display: inline-block;
+    vertical-align: $valign;
+}
+
+
+@function rem($px){
+    @return $px/16px + 0rem;
+}
+
+//Medias
+
+@mixin desktop {
+    @media screen and (max-width: 1200px){
+        @content;
+    }
+}
+
+
+@mixin laptop {
+    @media screen and (max-width: 992px){
+        @content;
+    }
+}
+
+
+@mixin tablet {
+    @media screen and (max-width: 768px){
+        @content;
+    }
+}
+
+
+@mixin mobile {
+    @media screen and (max-width: 480px){
+        @content;
+    }
+}
